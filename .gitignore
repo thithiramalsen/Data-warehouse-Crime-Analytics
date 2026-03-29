@@ -1,0 +1,4 @@
+dataset/Crime_Data_from_2020_to_2024_20260326.csv
+output/
+__pycache__/
+*.pyc
