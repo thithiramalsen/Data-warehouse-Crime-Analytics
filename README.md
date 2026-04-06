@@ -1,10 +1,61 @@
-# LAPD dataset helpers
+# LAPD Crime Analytics Data Warehouse + Cube
 
-This repository provides a small utility to extract lookup tables from the LAPD crime CSV.
+This repository contains:
 
-Quick start (PowerShell from repo root):
+- A SQL Server Integration Services (SSIS) ETL project for loading a crime analytics data warehouse.
+- A SQL Server Analysis Services (SSAS) multidimensional cube project for analysis.
+- A Python helper script to extract lookup tables from LAPD public data.
 
-1. Create a virtual environment (optional):
+The large source dataset is intentionally not committed to Git.
+
+## Repository Layout
+
+- `Data Warehouse/`
+  - `Datasets/` (local data only, large raw CSV excluded from Git)
+  - `LAPDCrimeDW_ETL/` (main SSIS project)
+- `LAPDCrimeCube/` (SSAS cube project)
+- `scripts/` (Python utilities)
+- `requirements.txt` (Python dependencies)
+- `DATASET_SOURCE.txt` (official LAPD dataset link and placement instructions)
+
+## Dataset Setup (Required)
+
+1. Download the dataset from the official source listed in `DATASET_SOURCE.txt`.
+2. Save the CSV with this file name:
+
+	`Crime_Data_from_2020_to_2024_20260326.csv`
+
+3. Place it at:
+
+	`Data Warehouse/Datasets/Crime_Data_from_2020_to_2024_20260326.csv`
+
+The Python helper also supports a legacy location:
+
+`dataset/Crime_Data_from_2020_to_2024_20260326.csv`
+
+The CSV is ignored by `.gitignore` so it stays local.
+
+## Working with the Data Warehouse (SSIS)
+
+Open:
+
+- `Data Warehouse/LAPDCrimeDW_ETL/LAPDCrimeDW_ETL.sln`
+
+Then run packages as needed (for example: staging, dimensions, fact, accumulating loads) from Visual Studio with SSIS installed.
+
+## Working with the Cube (SSAS)
+
+Open:
+
+- `LAPDCrimeCube/LAPDCrimeCube.sln`
+
+Then deploy/process from Visual Studio with SSAS project support.
+
+## Python Lookup Extraction Helper
+
+From repository root (PowerShell):
+
+1. Optional virtual environment:
 
 ```powershell
 python -m venv .venv
@@ -17,22 +68,16 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-3. Run the extractor:
+3. Run extractor:
 
 ```powershell
 python scripts\extract_lapd_lookups.py
 ```
 
-Outputs are written to the `output/` folder:
+Generated outputs are written to `output/`.
 
-- `output/CrimeCategories.xlsx`
-- `output/WeaponLookup.csv`
+## Git Notes
 
-Notes:
-- The raw CSV is expected at `dataset/Crime_Data_from_2020_to_2024_20260326.csv`
-- The dataset CSV is large and is ignored by Git. If it was previously tracked, run:
-
-```powershell
-git rm --cached dataset/Crime_Data_from_2020_to_2024_20260326.csv
-git commit -m "Stop tracking large dataset file"
-```
+- Large raw CSV input is excluded from Git.
+- Generated build artifacts and user-specific Visual Studio files are excluded.
+- Existing warehouse and cube source files are preserved as-is.

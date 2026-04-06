@@ -56,7 +56,20 @@ def fallback_output_path(path: Path) -> Path:
 def main() -> None:
     # repo root is two levels up from this script when located in scripts/
     root_dir = Path(__file__).resolve().parents[1]
-    input_csv = root_dir / "dataset" / "Crime_Data_from_2020_to_2024_20260326.csv"
+    dataset_filename = "Crime_Data_from_2020_to_2024_20260326.csv"
+    candidate_input_paths = [
+        root_dir / "Data Warehouse" / "Datasets" / dataset_filename,
+        root_dir / "dataset" / dataset_filename,
+    ]
+    input_csv = next((path for path in candidate_input_paths if path.exists()), candidate_input_paths[0])
+
+    if not input_csv.exists():
+        searched_paths = "\n".join(f"- {path}" for path in candidate_input_paths)
+        raise FileNotFoundError(
+            "Dataset CSV not found. Place the file in one of these locations:\n"
+            f"{searched_paths}"
+        )
+
     output_dir = root_dir / "output"
     output_dir.mkdir(parents=True, exist_ok=True)
 

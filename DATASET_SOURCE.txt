@@ -1,0 +1,13 @@
+LAPD Crime Dataset Source
+
+Official download page:
+https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-2024/2nrs-mtv8
+
+Expected local file name:
+Crime_Data_from_2020_to_2024_20260326.csv
+
+Place the file at:
+Data Warehouse/Datasets/Crime_Data_from_2020_to_2024_20260326.csv
+
+Note:
+This CSV is intentionally excluded from Git to keep the repository lightweight.

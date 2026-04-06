@@ -1,4 +1,20 @@
-dataset/Crime_Data_from_2020_to_2024_20260326.csv
+# Large local source datasets (keep out of Git)
+**/Crime_Data_from_2020_to_2024*.csv
+
+# Python artifacts
 output/
 __pycache__/
 *.pyc
+
+# Visual Studio user state
+.vs/
+*.user
+
+# Build artifacts
+**/bin/
+**/obj/
+*.ispac
+*.asdatabase
+*.configsettings
+*.deploymentoptions
+*.deploymenttargets

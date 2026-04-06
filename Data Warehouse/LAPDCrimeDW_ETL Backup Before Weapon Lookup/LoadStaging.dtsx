@@ -1,0 +1,1719 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/26/2026 3:06:06 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-FN2QP7H"
+  DTS:CreatorName="DESKTOP-FN2QP7H\Thithira"
+  DTS:DTSID="{A84C51FE-C2A5-40EC-B375-7D990F81B7FC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="LoadStaging"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{E007A7A0-39F0-468A-A260-559234609507}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection staging]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6E620E4B-BBB7-460D-8AEA-802D50FD229F}"
+      DTS:ObjectName="Flat File Connection staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="E:\SLIIT\Projects\DWBI\Repo\Datasets\Crime_Data_from_2020_to_2024_20260326.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;DR_NO&quot;"
+              DTS:DTSID="{BA85A986-5C0F-475B-B8B2-9F32ECD65D25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Date Rptd&quot;"
+              DTS:DTSID="{5EE2577C-7EB0-41EE-B49D-BA9FC0C98A3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;DATE OCC&quot;"
+              DTS:DTSID="{BC639A16-00A8-48FE-86BD-41FAB46435B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;TIME OCC&quot;"
+              DTS:DTSID="{8220A5EA-DD8F-4ECF-BBAF-BC90DD6208F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;AREA&quot;"
+              DTS:DTSID="{2FC4A166-767F-429A-9B35-E07120935CCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;AREA NAME&quot;"
+              DTS:DTSID="{DACC1D09-0FBF-4B04-BF83-3B79D93C9FB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Rpt Dist No&quot;"
+              DTS:DTSID="{58AB28E1-0A3F-40E9-BCA2-A11B603349A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Part 1-2&quot;"
+              DTS:DTSID="{94E195AB-9B55-4829-BAC2-672EE960D644}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Crm Cd&quot;"
+              DTS:DTSID="{AAB2FABF-9F18-4B2D-98A1-231690F5167F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Crm Cd Desc&quot;"
+              DTS:DTSID="{BDE31018-7FCB-4407-BE33-276E8FD2CBCC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Mocodes&quot;"
+              DTS:DTSID="{FEA97E2E-F878-4449-927E-6F4F8F3141FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Vict Age&quot;"
+              DTS:DTSID="{DC9EE45A-5547-47CB-B9EF-4EE85DB9D067}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Vict Sex&quot;"
+              DTS:DTSID="{14E77073-9F3B-45C9-95F5-40268B9A2EFC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Vict Descent&quot;"
+              DTS:DTSID="{11E8BA92-DCC3-4BE6-91DB-0F2E8C86C0BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Premis Cd&quot;"
+              DTS:DTSID="{6AA37ACE-5D66-41ED-84C0-72ECE6A3698A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Premis Desc&quot;"
+              DTS:DTSID="{EE70F08C-9830-4EAA-8026-14E0D37638B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Weapon Used Cd&quot;"
+              DTS:DTSID="{C477C8CF-5327-424C-B128-BD9E0A5914AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Weapon Desc&quot;"
+              DTS:DTSID="{19C61953-FEB4-4579-8267-2321D6A1E264}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Status&quot;"
+              DTS:DTSID="{57CAC52B-0186-4EE6-9489-65121A42D401}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Status Desc&quot;"
+              DTS:DTSID="{26B65B9F-06F9-41C1-AB6C-8DABB7C4C698}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Crm Cd 1&quot;"
+              DTS:DTSID="{593F1EDB-7BCC-4A60-8AE6-071D814F6734}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Crm Cd 2&quot;"
+              DTS:DTSID="{F4666551-C7F7-4E40-A19E-4B3F664CB002}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Crm Cd 3&quot;"
+              DTS:DTSID="{483A875A-FB81-4787-8C43-2B85F9E01FD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Crm Cd 4&quot;"
+              DTS:DTSID="{C011EC8F-8564-4C98-B6ED-2E012121A4B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;LOCATION&quot;"
+              DTS:DTSID="{CAA874AE-F5E3-4D5C-82F4-23B5DE8BE94E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Cross Street&quot;"
+              DTS:DTSID="{4C368E7B-BB6F-43C5-B3A2-A63BDB86CCD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;LAT&quot;"
+              DTS:DTSID="{499C9700-0D3B-4D44-A23C-58C104784AC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;LON&quot;"
+              DTS:DTSID="{F0EF3F00-EE01-45BC-A033-3EE894EE6736}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\SQLEXPRESS01.LAPDCrimeDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{63944743-A0F3-407E-94D2-107593474E32}"
+      DTS:ObjectName="localhost\SQLEXPRESS01.LAPDCrimeDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS01;Initial Catalog=LAPDCrimeDW;Provider=MSOLEDBSQL19.1;Integrated Security=SSPI;Trust Server Certificate=True;Application Name=SSIS-LoadStaging-{63944743-A0F3-407E-94D2-107593474E32}localhost\SQLEXPRESS01.LAPDCrimeDW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F1058CAC-2DD7-462C-992E-A9F407024DCA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load CSV to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D0F58CBF-5D05-4E88-8633-B9E81B5DAC8B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load CSV to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load CSV to Staging\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV to Staging\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection staging]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;DR_NO&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;DR_NO&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;DR_NO&quot;]"
+                      name="&quot;DR_NO&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Date Rptd&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Date Rptd&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Date Rptd&quot;]"
+                      name="&quot;Date Rptd&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;DATE OCC&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;DATE OCC&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;DATE OCC&quot;]"
+                      name="&quot;DATE OCC&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;TIME OCC&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;TIME OCC&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;TIME OCC&quot;]"
+                      name="&quot;TIME OCC&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;AREA&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;AREA&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;AREA&quot;]"
+                      name="&quot;AREA&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;AREA NAME&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;AREA NAME&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;AREA NAME&quot;]"
+                      name="&quot;AREA NAME&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Rpt Dist No&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Rpt Dist No&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Rpt Dist No&quot;]"
+                      name="&quot;Rpt Dist No&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Part 1-2&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Part 1-2&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Part 1-2&quot;]"
+                      name="&quot;Part 1-2&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd&quot;]"
+                      name="&quot;Crm Cd&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd Desc&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd Desc&quot;]"
+                      length="500"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd Desc&quot;]"
+                      name="&quot;Crm Cd Desc&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Mocodes&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Mocodes&quot;]"
+                      length="500"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Mocodes&quot;]"
+                      name="&quot;Mocodes&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Age&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Vict Age&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Age&quot;]"
+                      name="&quot;Vict Age&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Sex&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Vict Sex&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Sex&quot;]"
+                      name="&quot;Vict Sex&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Descent&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Vict Descent&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Descent&quot;]"
+                      name="&quot;Vict Descent&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Premis Cd&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Premis Cd&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Premis Cd&quot;]"
+                      name="&quot;Premis Cd&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Premis Desc&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Premis Desc&quot;]"
+                      length="500"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Premis Desc&quot;]"
+                      name="&quot;Premis Desc&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Weapon Used Cd&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Weapon Used Cd&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Weapon Used Cd&quot;]"
+                      name="&quot;Weapon Used Cd&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Weapon Desc&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Weapon Desc&quot;]"
+                      length="500"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Weapon Desc&quot;]"
+                      name="&quot;Weapon Desc&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Status&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Status&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Status&quot;]"
+                      name="&quot;Status&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Status Desc&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Status Desc&quot;]"
+                      length="500"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Status Desc&quot;]"
+                      name="&quot;Status Desc&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 1&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd 1&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 1&quot;]"
+                      name="&quot;Crm Cd 1&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 2&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd 2&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 2&quot;]"
+                      name="&quot;Crm Cd 2&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 3&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd 3&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 3&quot;]"
+                      name="&quot;Crm Cd 3&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 4&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd 4&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 4&quot;]"
+                      name="&quot;Crm Cd 4&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LOCATION&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;LOCATION&quot;]"
+                      length="500"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LOCATION&quot;]"
+                      name="&quot;LOCATION&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Cross Street&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Cross Street&quot;]"
+                      length="500"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Cross Street&quot;]"
+                      name="&quot;Cross Street&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LAT&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;LAT&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LAT&quot;]"
+                      name="&quot;LAT&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LON&quot;]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;LON&quot;]"
+                      length="50"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LON&quot;]"
+                      name="&quot;LON&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;DR_NO&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;DR_NO&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Date Rptd&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Date Rptd&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;DATE OCC&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;DATE OCC&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;TIME OCC&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;TIME OCC&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;AREA&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;AREA&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;AREA NAME&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;AREA NAME&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Rpt Dist No&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Rpt Dist No&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Part 1-2&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Part 1-2&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Crm Cd&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd Desc&quot;]"
+                      dataType="wstr"
+                      length="500"
+                      name="&quot;Crm Cd Desc&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Mocodes&quot;]"
+                      dataType="wstr"
+                      length="500"
+                      name="&quot;Mocodes&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Vict Age&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Vict Age&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Vict Sex&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Vict Sex&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Vict Descent&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Vict Descent&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Premis Cd&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Premis Cd&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Premis Desc&quot;]"
+                      dataType="wstr"
+                      length="500"
+                      name="&quot;Premis Desc&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Weapon Used Cd&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Weapon Used Cd&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Weapon Desc&quot;]"
+                      dataType="wstr"
+                      length="500"
+                      name="&quot;Weapon Desc&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Status&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Status&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Status Desc&quot;]"
+                      dataType="wstr"
+                      length="500"
+                      name="&quot;Status Desc&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd 1&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Crm Cd 1&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd 2&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Crm Cd 2&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd 3&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Crm Cd 3&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Crm Cd 4&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;Crm Cd 4&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;LOCATION&quot;]"
+                      dataType="wstr"
+                      length="500"
+                      name="&quot;LOCATION&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;Cross Street&quot;]"
+                      dataType="wstr"
+                      length="500"
+                      name="&quot;Cross Street&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;LAT&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;LAT&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;LON&quot;]"
+                      dataType="wstr"
+                      length="50"
+                      name="&quot;LON&quot;" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load CSV to Staging\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[LAPD_Staging]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load CSV to Staging\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost\SQLEXPRESS01.LAPDCrimeDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost\SQLEXPRESS01.LAPDCrimeDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;DR_NO&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;DR_NO&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DR_NO]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;DR_NO&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Crm Cd Desc&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="&quot;Crm Cd Desc&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_Desc]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd Desc&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Vict Age&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Vict Age&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vict_Age]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Age&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Vict Sex&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Vict Sex&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vict_Sex]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Sex&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Vict Descent&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Vict Descent&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vict_Descent]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Vict Descent&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Premis Cd&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Premis Cd&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Premis_Cd]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Premis Cd&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Premis Desc&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="&quot;Premis Desc&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Premis_Desc]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Premis Desc&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Weapon Used Cd&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Weapon Used Cd&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weapon_Used_Cd]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Weapon Used Cd&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Weapon Desc&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="&quot;Weapon Desc&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weapon_Desc]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Weapon Desc&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Status&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Status&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Status&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Status Desc&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="&quot;Status Desc&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status_Desc]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Status Desc&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Crm Cd 1&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Crm Cd 1&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_1]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 1&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Crm Cd 2&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Crm Cd 2&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_2]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 2&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Crm Cd 3&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Crm Cd 3&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_3]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 3&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Crm Cd 4&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Crm Cd 4&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_4]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd 4&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;LOCATION&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="&quot;LOCATION&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LOCATION]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LOCATION&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Cross Street&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="&quot;Cross Street&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cross_Street]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Cross Street&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;LON&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;LON&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LON]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LON&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Date Rptd&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Date Rptd&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Rptd]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Date Rptd&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;DATE OCC&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;DATE OCC&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DATE_OCC]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;DATE OCC&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;TIME OCC&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;TIME OCC&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TIME_OCC]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;TIME OCC&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;AREA&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;AREA&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AREA]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;AREA&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;AREA NAME&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;AREA NAME&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AREA_NAME]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;AREA NAME&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Rpt Dist No&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Rpt Dist No&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rpt_Dist_No]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Rpt Dist No&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Part 1-2&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Part 1-2&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Part_1_2]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Part 1-2&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Crm Cd&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;Crm Cd&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Crm Cd&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;Mocodes&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="&quot;Mocodes&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mocodes]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;Mocodes&quot;]" />
+                    <inputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;LAT&quot;]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="&quot;LAT&quot;"
+                      externalMetadataColumnId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAT]"
+                      lineageId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;LAT&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DR_NO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DR_NO" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Rptd]"
+                      dataType="wstr"
+                      length="50"
+                      name="Date_Rptd" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DATE_OCC]"
+                      dataType="wstr"
+                      length="50"
+                      name="DATE_OCC" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TIME_OCC]"
+                      dataType="wstr"
+                      length="50"
+                      name="TIME_OCC" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AREA]"
+                      dataType="wstr"
+                      length="50"
+                      name="AREA" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AREA_NAME]"
+                      dataType="wstr"
+                      length="100"
+                      name="AREA_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rpt_Dist_No]"
+                      dataType="wstr"
+                      length="50"
+                      name="Rpt_Dist_No" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Part_1_2]"
+                      dataType="wstr"
+                      length="50"
+                      name="Part_1_2" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crm_Cd" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_Desc]"
+                      dataType="wstr"
+                      length="500"
+                      name="Crm_Cd_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mocodes]"
+                      dataType="wstr"
+                      length="500"
+                      name="Mocodes" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vict_Age]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vict_Age" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vict_Sex]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vict_Sex" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vict_Descent]"
+                      dataType="wstr"
+                      length="50"
+                      name="Vict_Descent" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Premis_Cd]"
+                      dataType="wstr"
+                      length="50"
+                      name="Premis_Cd" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Premis_Desc]"
+                      dataType="wstr"
+                      length="500"
+                      name="Premis_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weapon_Used_Cd]"
+                      dataType="wstr"
+                      length="50"
+                      name="Weapon_Used_Cd" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weapon_Desc]"
+                      dataType="wstr"
+                      length="500"
+                      name="Weapon_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="50"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status_Desc]"
+                      dataType="wstr"
+                      length="500"
+                      name="Status_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crm_Cd_1" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_2]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crm_Cd_2" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_3]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crm_Cd_3" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crm_Cd_4]"
+                      dataType="wstr"
+                      length="50"
+                      name="Crm_Cd_4" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LOCATION]"
+                      dataType="wstr"
+                      length="500"
+                      name="LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cross_Street]"
+                      dataType="wstr"
+                      length="500"
+                      name="Cross_Street" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LAT]"
+                      dataType="wstr"
+                      length="50"
+                      name="LAT" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LON]"
+                      dataType="wstr"
+                      length="50"
+                      name="LON" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load CSV to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load CSV to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load CSV to Staging.Paths[Flat File Source Output]"
+              endId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load CSV to Staging\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Staging"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AB77FCF5-AF2D-4C33-9AEF-9ABD57AE2F87}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Staging"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{63944743-A0F3-407E-94D2-107593474E32}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE LAPD_Staging" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CE8339A9-7D0B-4FC1-9F80-2A54F5289A25}"
+      DTS:From="Package\Truncate Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load CSV to Staging" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Load CSV to Staging"
+          TopLeft="289.999984155099,263.466664834552" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Truncate Staging"
+          TopLeft="304.999983335535,177.666665431195" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="380.699983745317,219.266665431195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.199999403357"
+              Start="0,0"
+              End="0,36.699999403357">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.699999403357" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load CSV to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Load CSV to Staging\OLE DB Destination"
+          TopLeft="288.333317579495,295.533331278231" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Load CSV to Staging\Flat File Source"
+          TopLeft="317.499982652566,200.199998607834" />
+        <EdgeLayout
+          Id="Package\Load CSV to Staging.Paths[Flat File Source Output]"
+          TopLeft="393.099982652566,241.799998607834">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19.1666650730704,53.7333326703972"
+              Start="0,0"
+              End="-19.1666650730704,46.2333326703972">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8666663351986" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8666663351986"
+                    Point2="0,26.8666663351986"
+                    Point3="-4,26.8666663351986" />
+                  <mssgle:LineSegment
+                    End="-15.1666650730704,26.8666663351986" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.1666650730704,26.8666663351986"
+                    Point2="-19.1666650730704,26.8666663351986"
+                    Point3="-19.1666650730704,30.8666663351986" />
+                  <mssgle:LineSegment
+                    End="-19.1666650730704,46.2333326703972" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load CSV to Staging\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
