@@ -17,6 +17,8 @@ The large source dataset is intentionally not committed to Git.
 - `scripts/` (Python utilities)
 - `requirements.txt` (Python dependencies)
 - `DATASET_SOURCE.txt` (official LAPD dataset link and placement instructions)
+ - `Excel/` (analysis workbooks and pivot reports)
+ - `PowerBI/` (Power BI Desktop files and dashboards)
 
 ## Dataset Setup (Required)
 
@@ -75,6 +77,13 @@ python scripts\extract_lapd_lookups.py
 ```
 
 Generated outputs are written to `output/`.
+
+## Excel & Power BI
+
+- `Excel/` contains analysis workbooks, pivot tables, and supporting spreadsheets used during exploration and reporting. Keep workbooks lightweight by sourcing the CSV from `Data Warehouse/Datasets/` and avoid embedding large data in files.
+- `PowerBI/` contains Power BI Desktop (`.pbix`) files and related artifacts. Power BI reports should connect to the local CSV (or a local database build of the warehouse) rather than storing the raw CSV inside the `.pbix` whenever possible.
+
+When sharing reports, include instructions or a data source file path (see `DATASET_SOURCE.txt`) so others can reproduce the connections locally.
 
 ## Git Notes
 
