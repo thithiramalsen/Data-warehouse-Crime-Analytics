@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LoadStaging"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{FFE637A8-CB16-430B-A758-5519BB355D0E}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{2A5879B3-0B6C-4758-B1E0-A2E535059365}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1536,6 +1536,10 @@
                       dataType="wstr"
                       length="50"
                       name="LON" />
+                    <externalMetadataColumn
+                      refId="Package\Load CSV to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DATE_OCC_CONVERTED]"
+                      dataType="dbDate"
+                      name="DATE_OCC_CONVERTED" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
